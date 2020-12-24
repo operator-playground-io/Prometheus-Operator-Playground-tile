@@ -23,7 +23,12 @@ Lets take the example of MariaDB Server. Here, we will explain the monitoring of
 
 ### How to monitor MariaDB server using Prometheus 
 
-Step 1:  Install the MariaDB operator by running the following command:
+Step 1: Install the MariaDB operator and MariaDB Server Instance by following below Step 1 and Step 2. 
+If you already installed MariaDB Operator and created MariaDB Server instance, you can skip Step 1 and Step 2.  
+
+
+
+Install the MariaDB operator by running the following command:
 
 
 ```execute
@@ -254,8 +259,10 @@ mariadb-operator-f96ddc69f-l44r4              1/1     Running   0          16m
 mariadb-server-5dccfb7b59-rwzqp               1/1     Running   0          16m
 ```
 
+Step 5: Install Prometheus Operator and Create Instance of Prometheus Server using Install Operator and following Steps in tutorial:"Prometheus Instance Creation tutorial".
+        If you already done with installation of Prometheus Operator and Created Instance of Prometheus Server,skip this Step:5.    
 
-Step 5: Create Instance of ServiceMonitor to monitor MariaDB Services:
+Step 6: Create Instance of ServiceMonitor to monitor MariaDB Services:
 
 
 ```execute
@@ -293,7 +300,7 @@ Output:
 servicemonitor.monitoring.coreos.com/mariadb-monitor created
 ```
 
-Step 6 : Access the Prometheus dashboard using below link:
+Step 7 : Access the Prometheus dashboard using below link:
 
 http://##DNS.ip##:30100
 
