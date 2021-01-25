@@ -31,6 +31,7 @@ The Prometheus Operator for Kubernetes provides easy monitoring definitions for 
 ### Prometheus Operator Architecture
 
 A high level Prometheus Operator Architecture is shown below :
+
 From the architectural diagram,the ServiceMonitor resource specifies how metrics can be retrieved from a set of services exposing them in a common way.A Prometheus resource object can dynamically include ServiceMonitor objects by their labels. The Operator configures the Prometheus instance to monitor all services covered by included ServiceMonitors and keeps this configuration synchronized with any changes happening in the cluster.
 
 
