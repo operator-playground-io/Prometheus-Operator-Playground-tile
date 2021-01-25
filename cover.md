@@ -1,6 +1,6 @@
 <h1 align="center">Prometheus Operator</h1>
 
-![Logo](_images/logo1.PNG)
+![Logo](_images/logo.PNG)
 
 
 ### Overview:
