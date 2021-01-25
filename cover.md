@@ -44,6 +44,7 @@ In this tutorial,we are going to cover following topics:
 1. Install Prometheus Operator and verify its successful installation.
 2. Create Prometheus Instance and verify status of pods and services.
 3. Monitoring a DB or any server using Prometheus and check metrics on Prometheus dashboard.
+4. Cleanup Operator.
 
 
 
