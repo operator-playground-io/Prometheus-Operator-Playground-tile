@@ -53,7 +53,7 @@ Delete above CSV value using kubectl delete csv command:
 ```execute
 kubectl delete csv/prometheusoperator.0.37.0 -n operators
 ```
-Note: Please use csv value in above kubectl delete csv command according to value retrieve in kubectl get csv command.The csv may be different from above value. 
+Note: The csv value may be different from above value.In the above delete csv command,Use the csv retrived by kubectl get csv command.  
  
 
 ***Delete all the yaml files:***
