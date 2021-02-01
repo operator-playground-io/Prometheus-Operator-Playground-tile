@@ -42,15 +42,20 @@ Example:
 kubectl get csv -n operators
 ```
 
-- Delete that CSV :
+Output:
+```
+NAME                        DISPLAY               VERSION   REPLACES                    PHASE
+prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0.32.0   Succeeded
+```
 
-Example:
+Delete above CSV value using kubectl delete csv command:
 
 ```execute
 kubectl delete csv/prometheusoperator.0.37.0 -n operators
 ```
-
+Note: Please use csv value in above kubectl delete csv command according to value retrieve in kubectl get csv command.The csv may be different from above value. 
  
+
 ***Delete all the yaml files:***
  
 
