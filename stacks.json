@@ -17,7 +17,7 @@
   "has_dataset": false,
   "has_api": false,
   "git_url": "https://github.com/operator-playground-io/Prometheus-Operator-Playground-tile.git",
-  "git_commit": "3aeac9c7eba27263481ef68345b0c235a7068d6f",
+  "git_commit": "5725b98ff00a32a9c0c7a21aade569b6776a0e55",
   "installTime": "5 minutes",
   "isStacksSaved": true
 }
