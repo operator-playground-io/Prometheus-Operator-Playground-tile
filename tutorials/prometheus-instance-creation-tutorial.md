@@ -2,7 +2,7 @@
 title: Prometheus Instance Creation tutorial
 description: This tutorial explains how create Instances for Prometheus
 ---
-### Create below yaml to create CR for Prometheus Instance:
+### Create below yaml to create CR for Prometheus Instance
 
 ```execute
 cat <<'EOF' > prometheusInstance.yaml
@@ -91,7 +91,7 @@ service/prometheus created
 - Access Prometheus dashboard with below url :
 
 
-Click on <a href="http://##DNS.ip##:30100" target="_blank">http://##DNS.ip##:30100</a> to access Prometheus dashboard from your browser.
+Click on <a href="http://##DNS.ip##:30100" target="_blank">http://##DNS.ip##:30100</a> to access Prometheus dashboard.
 
 You will see the Prometheus dashboard as below :
 
