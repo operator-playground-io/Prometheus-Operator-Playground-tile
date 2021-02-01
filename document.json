@@ -1,7 +1,7 @@
 {
     "name": "Prometheus Operator",
     "description": "Prometheus Operator",
-    "logo": "_images/SalesStack.png",
+    "logo": "_images/prometheus-logo-1.png",
     "has_supporting_content": true,
     "stack_id": "prometheus-operator",
     "type": "stack",
