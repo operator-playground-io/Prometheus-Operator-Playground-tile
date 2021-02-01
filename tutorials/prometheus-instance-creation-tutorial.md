@@ -88,13 +88,13 @@ Output:
 service/prometheus created
 ```
 
-- Access Prometheus dashboard with below url :
+- Access Prometheus dashboard :
 
 
 Click on <a href="http://##DNS.ip##:30100" target="_blank">http://##DNS.ip##:30100</a> to access Prometheus dashboard.
 
 You will see the Prometheus dashboard as below :
 
-![prometheus-page](_images/prom.png)
+![prometheus-page](_images/prom1.png)
 
 
