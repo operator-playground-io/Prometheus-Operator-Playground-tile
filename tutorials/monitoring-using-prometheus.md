@@ -139,7 +139,7 @@ NAME                               READY   STATUS    RESTARTS   AGE
 mariadb-operator-f96ddc69f-l44r4   1/1     Running   0          10m
 mariadb-server-5dccfb7b59-rwzqp    1/1     Running   0          10m
 ```
-
+Note: Please wait till Pod STATUS will be "Running" and then proceed further.
 Step 3 : Access MariaDB Database. 
 
 - Connect to MariaDB Server pod.
@@ -314,6 +314,8 @@ mariadb-monitor-deployment-7dd85cfbbd-kbbjb   1/1     Running   0          9s
 mariadb-operator-f96ddc69f-l44r4              1/1     Running   0          16m
 mariadb-server-5dccfb7b59-rwzqp               1/1     Running   0          16m
 ```
+
+Note: Please wait till Pod STATUS will be "Running" and then proceed further.
 
 Step 5: Install Prometheus Operator and Create Instance of Prometheus Server using Install Operator and following Steps in tutorial:"Prometheus Instance Creation tutorial".
         If you already done with installation of Prometheus Operator and Created Instance of Prometheus Server,skip this Step 5.    
