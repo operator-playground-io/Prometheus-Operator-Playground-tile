@@ -146,7 +146,7 @@ Step 3 : Access MariaDB Database.
 
  - Copy below command to the terminal,add the podname of MariaDB Server Instance.
     
- ```copycommand
+```copycommand
  kubectl exec -it <podname> bash -n my-mariadb-operator-app
  ```
 
@@ -174,14 +174,69 @@ exit
 ```
 
 
-- To login through root user, use below command:
+- To login through root user use below command:
 
 
-```
+```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
+- Create database testdb
 
+```execute
+create database testdb;
+```
+
+
+- Use the testdb to create some table 
+
+```execute
+use testdb;
+```
+
+
+- Create table 
+
+```execute
+create table Population(year numeric,population numeric);
+```
+
+- Insert data into the table so that we can check MariaDB mySQL metrics from Grafana Dashboard.
+
+```execute
+insert into Population values(2017,1380004385 );
+```
+
+```execute
+insert into Population values(2018,1366417754 );
+```
+
+```execute
+insert into Population values(2019,1352642280 );
+```
+
+```execute
+insert into Population values(2020,1338676785 );
+```
+
+
+- Retrieve the data from table
+
+```execute
+select * from Population;
+```
+
+- Exit from testdb :
+
+```execute
+exit
+```
+
+- Exit from pod :
+
+```execute
+exit
+```
 
 
 Step 4: Enable monitoring service for MariaDB Server.
@@ -261,7 +316,7 @@ mariadb-server-5dccfb7b59-rwzqp               1/1     Running   0          16m
 ```
 
 Step 5: Install Prometheus Operator and Create Instance of Prometheus Server using Install Operator and following Steps in tutorial:"Prometheus Instance Creation tutorial".
-        If you already done with installation of Prometheus Operator and Created Instance of Prometheus Server,skip this Step:5.    
+        If you already done with installation of Prometheus Operator and Created Instance of Prometheus Server,skip this Step 5.    
 
 Step 6: Create Instance of ServiceMonitor to monitor MariaDB Services:
 
