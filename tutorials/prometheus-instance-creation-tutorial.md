@@ -53,6 +53,7 @@ prometheus-operator-6f7589ff7f-qdh9c   1/1     Running   0          102s
 prometheus-server-0                    3/3     Running   1          26s
 ```
 
+Please wait till Pod STATUS will be "Running" and then proceed further.
 
 - Create below yaml for NodePort service to access prometheus server:
 
