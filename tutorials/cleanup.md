@@ -12,24 +12,23 @@ description: This tutorial explains how to cleanup Operator
 ***Delete the operator's Custom Resources  by kubectl delete commands :***
 
  
-
-Example:
- 
- ```
+ ```execute
  kubectl delete -f prometheusInstance.yaml -n operators
+ kubectl delete -f prometheus_service.yaml -n operators
+ kubectl delete -f MariaDBserver.yaml -n my-mariadb-operator-app
+ kubectl delete -f MariaDBmonitoring.yaml -n my-mariadb-operator-app
+ kubectl delete -f ServiceMonitor.yaml -n operators 
  ```
 
-Note: Here prometheusInstance.yaml is the Custom Resource  of the Prometheus Server Instance.
-Similarly,delete all the Custom Resource s.
- 
 
 ***Delete the operator by kubectl delete command:***
  
  
  Example:
  
- ```
+ ```execute
  kubectl delete -f https://operatorhub.io/install/prometheus.yaml
+ kubectl delete -f https://operatorhub.io/install/mariadb-operator-app.yaml
  ```
  
 
@@ -39,7 +38,7 @@ Similarly,delete all the Custom Resource s.
 
 Example:
 
-```
+```execute
 kubectl get csv -n operators
 ```
 
@@ -47,17 +46,21 @@ kubectl get csv -n operators
 
 Example:
 
-```
+```execute
 kubectl delete csv/prometheusoperator.0.37.0 -n operators
 ```
 
  
 ***Delete all the yaml files:***
  
- Example:
+
  
-  ```
+  ```execute
   rm -rf prometheusInstance.yaml 
-  ```
+  rm -rf prometheus_service.yaml
+  rm -rf MariaDBserver.yaml
+  rm -rf MariaDBmonitoring.yaml
+  rm -rf ServiceMonitor.yaml
+ ```
   
 
