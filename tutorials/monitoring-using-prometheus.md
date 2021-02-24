@@ -352,10 +352,10 @@ Output:
 servicemonitor.monitoring.coreos.com/mariadb-monitor created
 ```
 
-**Step 6 : Access the Prometheus dashboard using the link http://##DNS.ip##:30100**
+**Step 6 : Access the Prometheus dashboard using the below link.**
 
 
-
+http://##DNS.ip##:30100
 
 On the prometheus UI, 
 - Go to Status->Targets to see the endpoints
