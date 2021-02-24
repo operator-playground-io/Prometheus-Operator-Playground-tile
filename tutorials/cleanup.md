@@ -1,6 +1,6 @@
 ---
-title: Prometheus Operator cleanup Tutorial
-description: This tutorial explains how to cleanup Operator
+title: Prometheus Operator cleanup. 
+description: Learn how to cleanup Prometheus Operator.
 ---
 
 
@@ -8,8 +8,7 @@ description: This tutorial explains how to cleanup Operator
 
 
 
-
-***Delete the operator's Custom Resources  by kubectl delete commands :***
+**Step 1: Delete the operator's Custom Resources by using `kubectl delete` commands as below.**
 
  
  ```execute
@@ -21,7 +20,7 @@ description: This tutorial explains how to cleanup Operator
  ```
 
 
-***Delete the operator by kubectl delete command:***
+**Step 2: Delete the operator by using `kubectl delete` command as below.**
  
  
  Example:
@@ -32,13 +31,12 @@ description: This tutorial explains how to cleanup Operator
  ```
  
 
-***Deleting the CSV resource ***
+**Step 3: Deleting the CSV resource. ***
 
-- Find the CSV in the namespace
+ **Step 3.1: Find the Prometheus CSV in the namespace "Operators".**
 
-Example:
 
-```execute
+```
 kubectl get csv -n operators
 ```
 
@@ -48,16 +46,17 @@ NAME                        DISPLAY               VERSION   REPLACES            
 prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0.32.0   Succeeded
 ```
 
-Delete above CSV value using kubectl delete csv command:
+ **Step 3.1: Delete the CSV.**
 
-```execute
+
+```
 kubectl delete csv/prometheusoperator.0.37.0 -n operators
 ```
+
 Note: The csv value may be different from above value.In the above delete csv command,Use the csv retrived by kubectl get csv command.  
  
 
-***Delete all the yaml files:***
- 
+**Step 4: Delete all the yaml files.**
 
  
   ```execute
@@ -68,4 +67,6 @@ Note: The csv value may be different from above value.In the above delete csv co
   rm -rf ServiceMonitor.yaml
  ```
   
+### Conclusion
 
+You have successfully cleaned up the Prometheus Operator resources.
