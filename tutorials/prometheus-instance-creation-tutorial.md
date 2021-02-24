@@ -1,8 +1,11 @@
 ---
-title: Prometheus Instance Creation tutorial
-description: This tutorial explains how create Instances for Prometheus
+title: Prometheus Instance Creation 
+description: Learn how to create instances of your Prometheus Operator
 ---
-### Create below yaml to create CR for Prometheus Instance
+
+###  Create Prometheus Instance.
+
+**Step 1: First, create the yaml definition of the Custom Resource for Prometheus Instance as below.** 
 
 ```execute
 cat <<'EOF' > prometheusInstance.yaml
@@ -28,7 +31,7 @@ spec:
 EOF
 ```
 
-Execute below command to create Prometheus instance 
+**Step 2: Execute the command below to create your Prometheus instance .** 
 
 ```execute
 kubectl create -f prometheusInstance.yaml -n operators
@@ -40,12 +43,15 @@ You will see the following resources created:
 prometheus.monitoring.coreos.com/prometheus created
 ```
 
-Get the associated Pods:
+**Step 3: Wait till Pod STATUS is "Running", then proceed.**
+
+
+**Step 4: Check the pod status.**
 
 ```execute
 kubectl get pods -n operators
 ```
-You will be able to see pods:
+You will see a similar output as below:
 
 ```output
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -53,9 +59,11 @@ prometheus-operator-6f7589ff7f-qdh9c   1/1     Running   0          102s
 prometheus-server-0                    3/3     Running   1          26s
 ```
 
-Please wait till Pod STATUS will be "Running" and then proceed further.
+Wait till Pod STATUS is "Running", then proceed.
 
-- Create below yaml for NodePort service to access prometheus server:
+### Create Prometheus Service of type NodePort 
+
+**Step 1: First, create the yaml definition as below.
 
 
 ```execute
@@ -77,7 +85,7 @@ spec:
 EOF
 ```
 
-- Execute below command to create Prometheus Service:
+**Step 2: Execute the command below to create your Prometheus Service.** 
 
 ```execute
 kubectl create -f prometheus_service.yaml -n operators
@@ -89,10 +97,17 @@ Output:
 service/prometheus created
 ```
 
-- Access Prometheus dashboard :
+**Step 3: Find the port for `NodePort` service using the following command.**
 
+```execute
+kubectl get svc -n operators
+```
 
-Click on <a href="http://##DNS.ip##:30100" target="_blank">http://##DNS.ip##:30100</a> to access Prometheus dashboard.
+we can see the output NodePort is `30100`
+
+**Step 4: Click on below link to access your Grafana dashboard.** 
+
+http://##DNS.ip##:30100
 
 You will see the Prometheus dashboard as below :
 
