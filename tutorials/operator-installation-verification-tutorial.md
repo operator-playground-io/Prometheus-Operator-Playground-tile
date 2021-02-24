@@ -1,32 +1,38 @@
 ---
-title: Prometheus Operator Installation Verification Tutorial
-description: Check Operator Deployment Status
+title: Prometheus Operator Installation Verification
+description: Learn how to verify that the Prometheus Operator has been properly installed in the namespace.
 ---
 
-### Check the Prometheus Operator 
+### Prometheus Operator status verification 
 
-After installation, verify that your operator got successfully installed by executing the below command.
+**Step 1: Verify that the Prometheus Operator has been installed successfully by executing below command.**
 
 ```execute
 kubectl get csv -n operators
 ```
 
-You should see a similar output as below.
+You will see a similar output as below.
 
 ```output
 NAME                        DISPLAY               VERSION   REPLACES                    PHASE
 prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0.32.0   Succeeded
 ```
 
-**Please wait till `PHASE` status will be `Succeeded` and then proceed further.**
+Note: Please wait for the PHASE status to be `Succeeded`, then proceed.
 
-After the installation is successful , you can check your operator pods by executing the below command.
+**Step 2: Check the pod status.**
 
 ```execute
 kubectl get pods -n operators
 ```
 
-You should see a pod starting with 'prometheus-operator' with Ready value '1/1' and Status 'Running' like the output below.
+You should see the pod details as:
+
+-	Name starting with 'kong-operator'
+-	Ready value as '1/1' 
+-	Status as 'Running'.
+
+See the sample output below.
 
 ```output
 NAME                                   READY   STATUS    RESTARTS   AGE
