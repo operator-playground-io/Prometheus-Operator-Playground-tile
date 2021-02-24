@@ -105,7 +105,7 @@ kubectl get svc -n operators
 
 we can see the output NodePort is `30100`
 
-**Step 4: Click on below link to access your Grafana dashboard.** 
+**Step 4: Click on below link to access your Prometheus dashboard.** 
 
 http://##DNS.ip##:30100
 
