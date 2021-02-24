@@ -309,7 +309,7 @@ mariadb-server-5dccfb7b59-rwzqp               1/1     Running   0          16m
 
 **Step 5: Install Prometheus Operator and Create Instance of Prometheus Server**
  
-  -**If you have already installed Prometheus Operator and have created Prometheus Instance and Service, you can skip this Step(Step 5).If not,proceed with below step.**
+  - **If you have already installed Prometheus Operator and have created Prometheus Instance and Service, you can skip this Step(Step 5).If not,proceed with below step.**
 
   - **Use the `Install` button of Prometheus Tutorial to install the Prometheus Operator and `Prometheus Instance Creation` tutorial to create Prometheus Instance and   service.**
   
