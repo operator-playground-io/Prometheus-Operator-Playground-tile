@@ -63,7 +63,7 @@ Wait till Pod STATUS is "Running", then proceed.
 
 ### Create Prometheus Service of type NodePort 
 
-**Step 1: First, create the yaml definition as below.
+**Step 1: First, create the yaml definition for `NodePort` Service as below.**
 
 
 ```execute
