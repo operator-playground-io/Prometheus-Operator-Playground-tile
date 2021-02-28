@@ -1,5 +1,5 @@
 ---
-title: Prometheus Monitoring
+title: Monitoring using Prometheus
 description: This tutorial explains how Prometheus monitors targets/endpoints
 ---
 
