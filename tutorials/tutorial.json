@@ -5,28 +5,28 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" Check Prometheus Operator Installation Status",
+         "description":"Learn how to verify that the Prometheus Operator has been properly installed in the namespace.",
          "duration":"5 min",
          "tutorial_name":"operator-installation-verification-tutorial.md",
-         "title":"1: Prometheus Operator Installation Verification"
+         "title":"1. Prometheus Operator Installation Verification"
       },
       {
-         "description":" Learn how to create Prometheus Instance",
+         "description":" Learn how to create instances of the Prometheus Operator",
          "duration":"10 min",
          "tutorial_name":"prometheus-instance-creation-tutorial.md",
-         "title":"2: Create Instance of Prometheus"
+         "title":"2. Prometheus Instance Creation"
       },
       {
-         "description":" Learn how to monitor targets using Prometheus",
+         "description":" Learn how Prometheus monitors targets/endpoints",
          "duration":"30 min",
          "tutorial_name":"monitoring-using-prometheus.md",
-         "title":"3: Monitor targets through Prometheus"
+         "title":"3. Monitoring using Prometheus"
       },
       {
-         "description":"Steps to cleanup Operator",
+         "description":"Learn how to cleanup the Prometheus Operator.",
          "duration":"10 min",
          "tutorial_name":"cleanup.md",
-         "title":"4: Cleanup Operator"
+         "title":"4. Cleanup the Prometheus Operator"
       }
       
    ],
